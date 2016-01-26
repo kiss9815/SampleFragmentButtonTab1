@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 if(old == null) {
                     Fragment f = new Tab1Fragment();
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.setCustomAnimations(R.anim.slide_left_in, R.anim.rotate_out);
                     ft.replace(R.id.container, f, TAB1_TAG); //이코드로 탭1, 탭2 구분
                     ft.commit();
                     setSelectButton((Button) v);
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 if(old == null) {
                     Fragment f = new Tab2Fragment();
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.setCustomAnimations(R.anim.slide_left_in, R.anim.rotate_out);
                     ft.replace(R.id.container, f, TAB2_TAG);
                     ft.commit();
                     setSelectButton((Button) v);
